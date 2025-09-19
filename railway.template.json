@@ -1,0 +1,57 @@
+{
+  "name": "SAP OData to MCP Bridge",
+  "description": "Live SAP Business Partner API integration with MCP server - Built by Cremencing Solutions",
+  "repository": "https://github.com/laeeqsiddique/sap_mcp_demo01",
+  "services": [
+    {
+      "name": "sap-mcp-server",
+      "source": {
+        "repo": "https://github.com/laeeqsiddique/sap_mcp_demo01",
+        "rootDirectory": "btp-sap-odata-to-mcp-server"
+      },
+      "envVars": {
+        "PORT": {
+          "description": "Port for the MCP server",
+          "defaultValue": "3333"
+        },
+        "SAP_APIHUB_APIKEY": {
+          "description": "Your SAP API Hub API Key (get from api.sap.com)",
+          "required": true
+        },
+        "SAP_ODATA_BASE": {
+          "description": "SAP OData Base URL",
+          "defaultValue": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_BUSINESS_PARTNER"
+        },
+        "ALLOWED_ORIGINS": {
+          "description": "CORS allowed origins",
+          "defaultValue": "*"
+        },
+        "MCP_TOOL_REGISTRY_TYPE": {
+          "description": "MCP tool registry type",
+          "defaultValue": "hierarchical"
+        },
+        "LOG_LEVEL": {
+          "description": "Logging level",
+          "defaultValue": "info"
+        },
+        "LOCAL_MODE": {
+          "description": "Enable local mode",
+          "defaultValue": "true"
+        }
+      }
+    },
+    {
+      "name": "sap-mcp-frontend",
+      "source": {
+        "repo": "https://github.com/laeeqsiddique/sap_mcp_demo01",
+        "rootDirectory": "sap-mcp-demo"
+      },
+      "envVars": {
+        "NEXT_PUBLIC_API_URL": {
+          "description": "URL of the MCP server",
+          "defaultValue": "https://${sap-mcp-server.railway.internal}"
+        }
+      }
+    }
+  ]
+}
