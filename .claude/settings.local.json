@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:community.sap.com)",
+      "Bash(git clone:*)",
+      "Bash(npm install)",
+      "Bash(npm run start:local:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(curl:*)",
+      "Read(//c/Users/laeeq/WindSurf/**)",
+      "Bash(npx create-next-app:*)",
+      "Bash(npx --yes create-next-app@latest sap-mcp-demo --typescript --tailwind --app --no-src-dir --import-alias \"@/*\" --eslint --turbopack)",
+      "Bash(npm install:*)",
+      "Bash(npm run dev:*)",
+      "Bash(npm run build:*)",
+      "Bash(PORT=3334 node dist/index-local.js)",
+      "Bash(PORT=3335 node dist/index-local.js)",
+      "WebFetch(domain:developers.sap.com)",
+      "WebSearch",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git rm:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
