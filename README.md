@@ -332,7 +332,23 @@ We welcome contributions! Please:
 
 ## 🙏 Acknowledgments
 
-This project was inspired by the original [btp-sap-odata-to-mcp-server](https://github.com/lemaiwo/btp-sap-odata-to-mcp-server) by lemaiwo. We've extended it with real-time filtering, modern UI, and production-ready features.
+This project builds upon the foundational work from the [btp-sap-odata-to-mcp-server](https://github.com/lemaiwo/btp-sap-odata-to-mcp-server) repository by [lemaiwo](https://github.com/lemaiwo).
+
+**Original Contributions by lemaiwo:**
+- Core MCP server architecture
+- SAP OData service integration patterns
+- Basic TypeScript structure
+
+**Enhanced by Cremencing Solutions:**
+- Real OData filtering implementation ($filter, $top, $select)
+- Modern React/Next.js frontend with responsive design
+- Professional UI/UX with Cremencing branding
+- Complete deployment automation (Railway/Vercel/BTP)
+- Comprehensive documentation and setup guides
+- Real-time data filtering and category-based queries
+- Production-ready error handling and logging
+
+We thank lemaiwo for the foundational architecture that enabled us to build this comprehensive SAP integration demo.
 
 ## 📄 License
 
